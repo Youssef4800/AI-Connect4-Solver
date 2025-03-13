@@ -9,7 +9,6 @@ def is_valid_window(window, piece):
 
 
 def count_winning_opportunities(board, piece):
-    WINDOW_LENGTH = 4
     opportunities = 0
 
     ## Horizontal
@@ -108,7 +107,6 @@ while not game_over:
 
 		if event.type == pygame.MOUSEBUTTONDOWN:
 			pygame.draw.rect(screen, BLACK, (0,0, width, SQUARESIZE))
-			#print(event.pos)
 			# Ask for Player 1 Input
 			if turn == PLAYER:
 				posx = event.pos[0]

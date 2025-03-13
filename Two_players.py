@@ -1,4 +1,4 @@
-from Global import *
+from Global_Two_players import *
 
 while not game_over:
 

@@ -102,7 +102,6 @@ while not game_over:
 
 		if event.type == pygame.MOUSEBUTTONDOWN:
 			pygame.draw.rect(screen, BLACK, (0,0, width, SQUARESIZE))
-			#print(event.pos)
 			# Ask for Player 1 Input
 			if turn == PLAYER:
 				posx = event.pos[0]
@@ -133,7 +132,7 @@ while not game_over:
 			col, minimax_score = minimax(board, level_of_difficulty, True)  # will cause a delay because no Alpha and Beta
 
 		if is_valid_location(board, col):
-			# pygame.time.wait(500)
+			pygame.time.wait(500)
 			row = get_next_open_row(board, col)
 			drop_piece(board, row, col, AI_PIECE)
 
